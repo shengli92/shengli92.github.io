@@ -2,8 +2,8 @@
 layout: post
 title: "Remove untracked files from Git working tree"
 description: ""
-category: 
-tags: []
+category: tech
+tags: [git]
 ---
 {% include JB/setup %}
 

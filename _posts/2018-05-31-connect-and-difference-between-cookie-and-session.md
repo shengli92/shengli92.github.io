@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "connect and difference between cookie and session"
+title: "Cookie AND Session"
 description: ""
-category: 
+category: tech
 tags: [cookie,session]
+excrept: Session 是存放在服务器端的，类似于Session结构来存放用户数据，当浏览器 第一次发送请求时，服务器自动生成了一个Session和一个Session ID用来唯一标识这个Session，并将其通过响应发送到浏览器。当浏览器第二次发送请求，会将前一次服务器响应中的Session ID放在请求中一并发送到服务器上，服务器从请求中提取出Session ID，并和保存的所有Session ID进行对比，找到这个用户对应的Session。
 ---
 {% include JB/setup %}
 
