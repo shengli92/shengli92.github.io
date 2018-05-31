@@ -36,6 +36,14 @@
   </head>
 
   <body>
+  <nav class="pc-nav">
+    <a class="icon" href="/">PAUL'S BLOG</a>
+    <ul>
+      {% assign pages_list = site.pages %}
+      {% assign group = 'navigation' %}
+      {% include JB/pages_list %}
+    </ul>
+  </nav>
   <section class="page-header">
     <h1 class="project-name">{{ site.title }}</h1>
     {% if page.layout != 'home' %}
