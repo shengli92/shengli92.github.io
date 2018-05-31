@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39173a45-db60-44e0-905b-7999d0115921" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,12 +102,9 @@
       <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="45" selection-end-column="12" />
-              <folding>
-                <marker date="1527759240000" expanded="true" signature="1672:1911" ph="..." />
-                <marker date="1527759240000" expanded="true" signature="1740:1895" ph="..." />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -389,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40385000" />
+    <option name="totallyTimeSpent" value="40423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
@@ -908,12 +904,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="45" selection-end-column="12" />
-          <folding>
-            <marker date="1527759240000" expanded="true" signature="1672:1911" ph="..." />
-            <marker date="1527759240000" expanded="true" signature="1740:1895" ph="..." />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
