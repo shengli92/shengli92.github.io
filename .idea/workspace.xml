@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39173a45-db60-44e0-905b-7999d0115921" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="39173a45-db60-44e0-905b-7999d0115921" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +12,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2018-06-06-install-php72-with-yum.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-06-06-install-php72-with-yum.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-06-install-php72-with-yum.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="334">
-                <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+              <first_editor relative-caret-position="15">
+                <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018-06-07-nginx-non-blocking.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2018-06-07-nginx-non-blocking.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="225">
+                <caret line="15" column="486" lean-forward="false" selection-start-line="15" selection-start-column="486" selection-end-line="15" selection-end-column="486" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -94,6 +105,7 @@
         <option value="$PROJECT_DIR$/_posts/2018-06-02-openresty.md" />
         <option value="$PROJECT_DIR$/_posts/2018-06-05-session--cookie-2.md" />
         <option value="$PROJECT_DIR$/_posts/2018-06-06-install-php72-with-yum.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-06-07-nginx-non-blocking.md" />
       </list>
     </option>
   </component>
@@ -272,12 +284,12 @@
       <workItem from="1527575036245" duration="15100000" />
       <workItem from="1527678115623" duration="9380000" />
       <workItem from="1527733608572" duration="1017000" />
-      <workItem from="1528180536625" duration="4178000" />
+      <workItem from="1528180536625" duration="6211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46360000" />
+    <option name="totallyTimeSpent" value="48393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="810" extended-state="6" />
@@ -358,13 +370,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/settings.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/JB/file_exists">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
@@ -726,8 +731,19 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-06-06-install-php72-with-yum.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="334">
-            <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <first_editor relative-caret-position="15">
+            <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-06-07-nginx-non-blocking.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="486" lean-forward="false" selection-start-line="15" selection-start-column="486" selection-end-line="15" selection-end-column="486" />
             <folding />
           </first_editor>
           <second_editor />
