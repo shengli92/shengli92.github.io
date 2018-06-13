@@ -18,8 +18,8 @@ tags: []
             if($handle === false) {
                 throw new Exception();
             }
-            while (feof($handle) === false) {       //feof - 测试文件指针是否到了文件结束的位置。 详见[feof]({{post.url || relative_url}}#feof)
-                yield fgetcsv($handle);     // fgetcsv()  - 从文件指针中读入一行并解析CSV字段。 详见[fgetcsv]({{post.url || relative_url}}#fgetcsv)
+            while (feof($handle) === false) {
+                yield fgetcsv($handle);
             }
             fclose($handle);
         }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39173a45-db60-44e0-905b-7999d0115921" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-06-13-example-of-generator.md" afterPath="$PROJECT_DIR$/_posts/2018-06-13-example-of-generator.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-13-example-of-generator.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="553">
-                <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+              <first_editor relative-caret-position="193">
+                <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -290,12 +290,12 @@
       <workItem from="1527733608572" duration="1017000" />
       <workItem from="1528180536625" duration="7433000" />
       <workItem from="1528769558111" duration="4841000" />
-      <workItem from="1528866907107" duration="2063000" />
+      <workItem from="1528866907107" duration="2168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56519000" />
+    <option name="totallyTimeSpent" value="56624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="784" y="23" width="656" height="809" extended-state="0" />
@@ -740,8 +740,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-06-13-example-of-generator.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="553">
-            <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <first_editor relative-caret-position="193">
+            <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
             <folding />
           </first_editor>
           <second_editor />
