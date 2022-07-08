@@ -12,7 +12,7 @@ tags: []
 #### 名词 & 概念
 
 ##### 数据库本地事务
-> ACID
+**ACID**
 数据库本地事务四大特性：
 -A:原子性(Atomicity)
 -C:一致性(Consistency)
