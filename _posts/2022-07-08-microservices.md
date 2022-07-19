@@ -2,8 +2,8 @@
 layout: post
 title: "微服务涉及到的名词解释"
 description: ""
-category:
-tags: []
+category: server
+tags: [微服务]
 ---
 {% include JB/setup %}
 
