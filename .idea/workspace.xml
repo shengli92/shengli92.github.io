@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39173a45-db60-44e0-905b-7999d0115921" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-07-08-microservices.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-07-08-microservices.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2022-07-18-mysql-note-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-07-18-mysql-note-2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +209,7 @@
       <workItem from="1654655617987" duration="1470000" />
       <workItem from="1657246643673" duration="5376000" />
       <workItem from="1657513232498" duration="2207000" />
-      <workItem from="1658115767855" duration="7928000" />
+      <workItem from="1658115767855" duration="8454000" />
     </task>
     <servers />
   </component>
