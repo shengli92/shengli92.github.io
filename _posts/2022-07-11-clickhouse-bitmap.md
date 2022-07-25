@@ -65,3 +65,55 @@ from user_tag_manager.user_tags_bitmap
 ```
 
 
+
+#### 2022-07-25 更新
+
+##### A 且 B: 
+```clickhouse
+-- 返回 命中的count
+with 
+groupBitmapOrStateIf(z, (tag_id='tag_id')) as A
+, groupBitmapOrStateIf(z, (tag_id='tag_id2')) as B
+, bitmapAnd(A, B) as AandB
+select bitmapCardinality(AandB) from bitmap_table;
+
+-- 返回结果集用：bitmapToArray()
+```
+
+
+##### A 或 B：
+```clickhouse
+with 
+groupBitmapOrStateIf(z, (tag_id = 'tag_id')) as A
+, groupBItmapOrStateIf(z, (tag_id = 'tag_id2')) as B
+, bitmapOr(A, B) as AorB
+select bitmapCardinality(AorB) from bitmap_table;
+```
+
+
+##### A 且 B不存在：
+```clickhouse
+-- 先获取A 异或 B，得到不属于A且不属于B的集合。 
+-- 然后 用 A 集合去和步骤1获取的集合取交集。 获取到属于A集合，但不属于B集合的部分
+with 
+groupBitmapOrStateIf(z, (tag_id = 'tag_id')) as A
+, groupBitmapOrStateIf(z, (tag_id='tag_id')) as B 
+, bitmapXor(A, B) as AxorB
+, bitmapAnd(A, AxorB) as A_B
+select bitmapCardinality(A_B) from bitmap_table;
+```
+
+
+##### (A 或 B) 且 C
+```clickhouse
+with 
+groupBitmapOrStateIf(z, (tag_id='tag1')) as A
+, groupBitmapOrStateIf(z, (tag_id='tag2')) as B
+, groupBitmapOrStateIf(z, (tag_id='tag3')) as C
+, bitmapOr(A, B) as AorB
+, bitmapAnd(AorB, C) as AorBandC
+select bitmapCardinality(AorBandC) from bitmap_table;
+```
+
+
+
