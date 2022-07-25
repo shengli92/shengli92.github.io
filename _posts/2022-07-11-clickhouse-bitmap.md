@@ -25,6 +25,18 @@ CREATE TABLE IF NOT EXISTS user_tag_bitmap
     SETTINGS index_granularity = 8192;
 ```
 
+##### 从 user_tags 表中添加数据到到bitmap表
+```clickhouse
+insert into user_tag_bitmap
+select now()                                   as etl_time,
+       app_id,
+       tag_name,
+       tag_value,
+       groupBitmapState(toUInt64OrZero(fp_id)) as ids
+from user_tag
+group by app_id, tag_name, tag_value;
+```
+
 ##### (A 或 B) 且 ( C 或 D)
 ```clickhouse
 select bitmapCardinality(bitmapAnd(
