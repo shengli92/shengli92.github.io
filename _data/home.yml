@@ -1,37 +1,41 @@
 navbar_entries:
-  - title: about
-    url: about
+  - title: 首页
+    url: /
 
-  - title: blog
+  - title: 文章列表
     url: blog
 
+  - title: 关于
+    url: about
+
   - title: website
-    url: https://www.abhinav.co
+    url: https://baidu.com
 
 project_entries:
+#  - title: Project 1
+#    url: overview-post
+#    desc: This is an example project, configured in _data/home.yml
+
+  - title: 键盘专区
+    url: keyboard
+    desc: 喜欢的键盘汇总
+    highlight: KEY
+
+  - title: 工作
+    url: work
+    desc: 工作踩坑记录
+
   - title: Project 1
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
-
-  - title: Project 2
-    url: overview-post
-    desc: Projects are shown in card layout
-
-  - title: Project 3
-    url: overview-post
-    desc: You can control visibility from _config.yml file
-
-  - title: Project 4
     url: overview-post
     desc: This project uses highlight markup, configured in _data/home.yml
     highlight: WIP
 
-  - title: Project 5
+  - title: Project 2
     url: overview-post
     desc: Moonwalk also has horizontal list (used in header and footer)
     highlight: WIP
 
-  - title: Project 6
+  - title: Project 2
     url: overview-post
     desc: It also has a scalable vertical list (in case you need it)
 
@@ -54,14 +58,14 @@ old_project_entries:
     desc: The better people know you, the better they collaborate
 
 footer_entries:
-  - title: abhinav's homepage
+  - title: 个人简介
     url: https://www.abhinav.co
 
-  - title: twitter
-    url: https://twitter.com/abhinav
-
-  - title: github
-    url: https://github.com/abhinavs
+#  - title: twitter
+#    url: https://twitter.com/abhinav
+#
+#  - title: github
+#    url: https://github.com/abhinavs
 
   - title: feed
     url: feed.xml
