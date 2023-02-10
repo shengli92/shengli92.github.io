@@ -3,7 +3,7 @@ layout: post
 tags: [work, python]
 ---
 
-
+## Django
 ### django中间件
 django 的中间件作用在 request 和 response 之间。 一个自定义的中间件必须继承 MiddlewareMixin (`from django.utils.deprecation import MiddlewareMixin`) 类，且自定义的中间件中可以定义五个方法，用来定义该中间件的行为，分别为
 
@@ -47,4 +47,31 @@ def index(request):
 #### process_exception
 用来捕捉视图函数的错误， 方法只有在视图函数中出现异常了才执行，按照 settings 的注册倒序执行
 
+
+## Python
+
+### python bitwise operator (位操作符)
+
+#### ^ (6上面的数字)
+按位异或， 对应位置上相同则为0，否则为1
+```python
+a = 6 ^ 2
+print(a) # 4
+# 6: 0110
+# 2: 0010
+# 按位异或的结果就是： 0100 即为4
+```
+
+
+#### 其余操作符
+
+
+| 位运算符         |    说明 |  示例 |
+|--------------|:--:|----:|
+| &            | 按位与     | 4&5 |
+| |            | 按位或     | 4|5 |
+| ^            | 按位异或   |  6^2 |
+| ~            | 按位取反   | ~6   |
+| <<           | 按位左移   | 4 << 2 | 
+| >>           | 按位右移   | 4 >> 2 | 
 
