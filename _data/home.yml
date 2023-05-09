@@ -25,10 +25,10 @@ project_entries:
     url: work
     desc: 工作踩坑记录
 
-  - title: Project 1
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml
-    highlight: WIP
+  - title: 乱七八糟
+    url: other
+    desc: 一些乱七八糟的东西，想到什么就记录一下吧
+    highlight: Other
 
   - title: Project 2
     url: overview-post
