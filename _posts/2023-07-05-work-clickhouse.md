@@ -8,7 +8,7 @@ tags: [clickhouse]
 本次记录的是  docker 运行 clickhouse
 首先使用*docker pull clickhouse/clickhouse-server*命令拉取 docker 镜像
 
-如果不需要修改clickhouse的用户密码等，直接云顶即可
+如果不需要修改clickhouse的用户密码等，直接运行即可
 ```shell
 docker run -it --rm --link some-clickhouse-server:clickhouse-server --entrypoint clickhouse-client clickhouse/clickhouse-server --host clickhouse-server
 # OR
