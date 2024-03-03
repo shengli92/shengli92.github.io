@@ -134,3 +134,226 @@ public class RegionExample : MonoBehaviour
 在这个示例中，我们使用 #region 指令创建了三个区域：Fields、Unity Callbacks 和 Custom Methods。每个区域都包含了一组相关的字段、Unity 回调函数或自定义方法。在编辑器中，这些区域可以展开或折叠，使代码更加清晰和易于浏览。
 
 尽管 #region 可以提高代码的可读性，但它也可能被滥用，导致代码过于复杂和难以理解。因此，应该谨慎使用 #region，并确保仅在逻辑上相关的代码块之间使用它。
+
+
+#### 使用委托封装事件中心
+
+通过 `on`, `emit`的关键字进行事件判定的示例，声明方法：
+
+```csharp
+
+public class EventCenter {
+    private static EventCenter s_instance;
+
+    public static EventCenter Inst() {
+        s_instance ??= new EventCenter();
+        return s_instance;
+    }
+
+    private readonly Dictionary<string, Delegate> _handlers;
+
+    private EventCenter() {
+        _handlers = new Dictionary<string, Delegate>();
+    }
+
+    #region T0
+
+    public void Once(string msg, Action cb) {
+        msg = "once_" + msg;
+
+        void onceCallback() {
+            cb.Invoke();
+            Off(msg, onceCallback);
+        }
+
+        On(msg, onceCallback);
+    }
+
+    public void SingleOnce(string msg, Action cb) {
+        string onceKey = "once_" + msg;
+        if (_handlers.ContainsKey(onceKey)) {
+            _handlers.Remove(onceKey);
+        }
+        Once(msg, cb);
+    }
+
+    public void On(string msg, Action cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Combine(_handlers[msg], cb);
+        } else {
+            _handlers[msg] = cb;
+        }
+    }
+
+    public void Off(string msg, Action cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Remove(_handlers[msg], cb);
+        }
+    }
+
+    public void Emit(string msg) {
+        if (_handlers.ContainsKey(msg)) { ((Action) _handlers[msg])?.Invoke(); }
+        if (_handlers.ContainsKey("once_" + msg)) { ((Action) _handlers["once_" + msg])?.Invoke(); }
+    }
+
+    #endregion
+
+    #region T1
+
+    public void Once<T>(string msg, Action<T> cb) {
+        msg = "once_" + msg;
+
+        void onceCallback(T param) {
+            cb.Invoke(param);
+            Off(msg, (Action<T>) onceCallback);
+        }
+
+        On(msg, (Action<T>) onceCallback);
+    }
+
+    public void SingleOnce<T>(string msg, Action<T> cb) {
+        string onceKey = "once_" + msg;
+        if (_handlers.ContainsKey(onceKey)) {
+            _handlers.Remove(onceKey);
+        }
+
+        Once(msg, cb);
+    }
+
+    public void On<T>(string msg, Action<T> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Combine(_handlers[msg], cb);
+        } else {
+            _handlers[msg] = cb;
+        }
+    }
+
+    public void Off<T>(string msg, Action<T> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Remove(_handlers[msg], cb);
+        }
+    }
+
+    public void Emit<T>(string msg, T p) {
+        if (_handlers.ContainsKey(msg)) { ((Action<T>) _handlers[msg])?.Invoke(p); }
+        if (_handlers.ContainsKey("once_" + msg)) { ((Action<T>) _handlers["once_" + msg])?.Invoke(p); }
+    }
+
+    #endregion
+
+    #region T2
+
+    public void Once<T1, T2>(string msg, Action<T1, T2> cb) {
+        msg = "once_" + msg;
+
+        void onceCallback(T1 p1, T2 p2) {
+            cb.Invoke(p1, p2);
+            Off(msg, (Action<T1, T2>) onceCallback);
+        }
+
+        On(msg, (Action<T1, T2>) onceCallback);
+    }
+
+    public void SingleOnce<T1, T2>(string msg, Action<T1, T2> cb) {
+        string onceKey = "once_" + msg;
+        if (_handlers.ContainsKey(onceKey)) {
+            _handlers.Remove(onceKey);
+        }
+
+        Once(msg, cb);
+    }
+
+    public void On<T1, T2>(string msg, Action<T1, T2> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Combine(_handlers[msg], cb);
+        } else {
+            _handlers[msg] = cb;
+        }
+    }
+
+    public void Off<T1, T2>(string msg, Action<T1, T2> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Remove(_handlers[msg], cb);
+        }
+    }
+
+    public void Emit<T1, T2>(string msg, T1 p1, T2 p2) {
+        if (_handlers.ContainsKey(msg)) { ((Action<T1, T2>) _handlers[msg])?.Invoke(p1, p2); }
+        if (_handlers.ContainsKey("once_" + msg)) { ((Action<T1, T2>) _handlers["once_" + msg])?.Invoke(p1, p2); }
+    }
+    #endregion
+
+    #region T3
+
+    public void Once<T1, T2, T3>(string msg, Action<T1, T2, T3> cb) {
+        msg = "once_" + msg;
+
+        void onceCallback(T1 p1, T2 p2, T3 p3) {
+            cb.Invoke(p1, p2, p3);
+            Off(msg, (Action<T1, T2, T3>) onceCallback);
+        }
+
+        On(msg, (Action<T1, T2, T3>) onceCallback);
+    }
+
+    public void SingleOnce<T1, T2, T3>(string msg, Action<T1, T2, T3> cb) {
+        string onceKey = "once_" + msg;
+        if (_handlers.ContainsKey(onceKey)) {
+            _handlers.Remove(onceKey);
+        }
+
+        Once(msg, cb);
+    }
+
+    public void On<T1, T2, T3>(string msg, Action<T1, T2, T3> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Combine(_handlers[msg], cb);
+        } else {
+            _handlers[msg] = cb;
+        }
+    }
+
+    public void Off<T1, T2, T3>(string msg, Action<T1, T2, T3> cb) {
+        if (_handlers.ContainsKey(msg)) {
+            _handlers[msg] = Delegate.Remove(_handlers[msg], cb);
+        }
+    }
+
+    public void Emit<T1, T2, T3>(string msg, T1 p1, T2 p2, T3 p3) {
+        if (_handlers.ContainsKey(msg)) { ((Action<T1, T2, T3>) _handlers[msg])?.Invoke(p1, p2, p3); }
+        if (_handlers.ContainsKey("once_" + msg)) { ((Action<T1, T2, T3>) _handlers["once_" + msg])?.Invoke(p1, p2, p3); }
+    }
+    #endregion
+}
+```
+
+调用方法：
+```csharp
+...
+
+// 事件绑定
+private void Start() {
+    _state = GameState.IDE;
+
+    EventCenter.Inst().On<Tray>(TrayEvent.DROP, onTrayDrop);
+    EventCenter.Inst().On<Tray>(TrayEvent.HOVER_ON, onTrayHover);
+
+    SpawnRandomTray();
+}
+
+// 事件解绑
+private void OnDestroy() {
+    _state = GameState.IDE;
+
+    EventCenter.Inst().Off<Tray>(TrayEvent.DROP, onTrayDrop);
+    EventCenter.Inst().Off<Tray>(TrayEvent.HOVER_ON, onTrayHover);
+}
+
+// 事件触发
+private void OnMouseUp() {
+    _isDragging = false;
+
+    EventCenter.Inst().Emit(TrayEvent.DROP, this);
+}
+
+```
