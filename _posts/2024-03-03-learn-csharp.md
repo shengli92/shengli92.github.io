@@ -357,3 +357,30 @@ private void OnMouseUp() {
 }
 
 ```
+
+
+#### Quaternion
+
+在 Unity中，使用 Quaternion 表示旋转。Quaternion 表示的是一个四元数，它包含四个分量：x、y、z 和 w，分别表示向量的虚部和实部。这些分量定义了旋转的方向和角度。
+以下是 Quaternion 的基本用法示例：
+```csharp
+using UnityEngine;
+
+public class QuaternionExample : MonoBehaviour
+{
+    void Start()
+    {
+        // 创建一个旋转 Quaternion，绕 Y 轴旋转 90 度
+        Quaternion rotation = Quaternion.Euler(0, 90, 0);
+
+        // 将 Quaternion 应用到游戏对象的旋转
+        transform.rotation = rotation;
+    }
+}
+
+```
+
+在这个示例中，我们使用 Quaternion.Euler 方法创建了一个旋转 Quaternion，使其绕 Y 轴旋转了 90 度。然后，我们将这个 Quaternion 应用到游戏对象的旋转上，以实现对象的旋转效果。
+
+除了使用 Quaternion.Euler 方法创建旋转 Quaternion 外，你还可以使用其他方法或属性来创建、操作和应用 Quaternion。
+例如，你可以使用 Quaternion.identity 来创建一个表示无旋转的 Quaternion，或者使用 transform.rotation 属性来获取或设置游戏对象的旋转。Unity 的 Quaternion 类还提供了一系列方法和属性，用于计算、插值、合并和比较 Quaternion。
